@@ -10,6 +10,8 @@ import { NgxGaugeModule } from 'ngx-gauge';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { FootarComponent } from './footar/footar.component';
+import { DatamanagementComponent } from './datamanagement/datamanagement.component';
+import { SigninComponent } from './signin/signin.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { FootarComponent } from './footar/footar.component';
     AppComponent,
     DashboardComponent,
     HeaderComponent,
-    FootarComponent
+    FootarComponent,
+    DatamanagementComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
