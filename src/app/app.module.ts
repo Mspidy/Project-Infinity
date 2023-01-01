@@ -4,13 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { ChartModule } from 'angular-highcharts';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { NgxGaugeModule } from 'ngx-gauge';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartModule,
+    HighchartsChartModule,
+    NgxGaugeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
