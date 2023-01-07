@@ -12,6 +12,9 @@ import { HeaderComponent } from './header/header.component';
 import { FootarComponent } from './footar/footar.component';
 import { DatamanagementComponent } from './datamanagement/datamanagement.component';
 import { SigninComponent } from './signin/signin.component';
+import { AgmCoreModule } from '@agm/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -29,6 +32,11 @@ import { SigninComponent } from './signin/signin.component';
     ChartModule,
     HighchartsChartModule,
     NgxGaugeModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw',
+    }),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

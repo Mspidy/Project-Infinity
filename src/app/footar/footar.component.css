@@ -1,0 +1,12 @@
+.card{
+    background-color: #353638;
+}
+
+agm-map {
+    height: 270px;
+    width: 650px;
+  }
+
+.conatiner{
+    margin-top: 20px;
+}

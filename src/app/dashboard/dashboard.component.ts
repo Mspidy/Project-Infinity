@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as Highcharts from "highcharts";
 
 @Component({
@@ -6,10 +6,24 @@ import * as Highcharts from "highcharts";
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
+
+  constructor() { }
+
+
+  randomNumber?: any
+  min?: any
+  max?: any
+  new=this.randomNumber
+
+  ngOnInit(): void {
+    this.generateRandomNumber()
+    console.log(this.randomNumber)
+    
+  }
 
   gaugeType = "semi";
-  gaugeValue = 78.3;
+  gaugeValue = 88;
   gaugeLabel = "Speed";
   gaugeAppendText = "km/hr";
   Highcharts: typeof Highcharts = Highcharts;
@@ -273,6 +287,22 @@ export class DashboardComponent {
     }]
   };
 
- 
+  // highlightedNumber:any
+  //   generateRandomNumber() {
+  //      min = 0.0200,
+  //       max = 0.120,
+  //       this.highlightedNumber = Math.random() * (max - min) + min;
+
+  //     alert(highlightedNumber);
+  //   };
+  generateRandomNumber() {
+    this.min = 30.0,
+      this.max = 98.0
+
+    this.randomNumber = Math.random() * (this.max - this.min) + this.min;
+    //alert(this.randomNumber)
+    //this.new = this.randomNumber
+  }
+
 
 }
