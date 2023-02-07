@@ -1,33 +1,41 @@
-<nav class="navbar navbar-expand navbar-light bg-primary"
-    style=" background-color: #2f2fa1 !important;">
-    <a class="navbar-brand" href="#" style="margin-left: 10px;"> <img
-            src="https://img.icons8.com/external-obvious-glyph-kerismaker/48/null/external-creative-design-thinking-glyph-obvious-glyph-kerismaker.png" /></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#" routerLinkActive="active" routerLink="/dashboard">Dashboard</a>
-            </li>
-            <li class="nav-item" style="margin-left: 20px;">
-                <a class="nav-link" href="#" routerLinkActive="active" routerLink="/datamanage">HandleSet</a>
-            </li>
-            <li class="nav-item dropdown" style="margin-left: 20px;">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    System
-                </a>
-            </li>
-            <li class="nav-item" style="margin-left: 950px;">
-                <select class="nav-links" style="background-color:#2f2fa1; color:aliceblue; padding:5px;border: 1px solid blue;border-radius: 10px;">
-                    <option><a href="#" tabindex="-1" aria-disabled="true">Project Infinity</a></option>
-                    <option (click)="signin()">Login</option>
-                    <option>Logout</option>
-                </select>
-            </li>
-        </ul>
+<nav class="navbar navbar-expand navbar-light" style=" background-color: #2f2fa1 !important;">
+    <div class="trade">
+        <img class="image" src="assets/stock.jpg">
+    </div>
+    <div class="container">
+        <div class="row">
+            <ul class="nav">
+                <li class="nav-label">
+                    <svg width="16"
+                        style="cursor:pointer;margin-right:6px;margin-top:1px;vertical-align:top;fill:#fff;stroke:#fff;stroke-width:0;"
+                        height="16" viewBox="0 0 32 32" data-icon="home" data-reactid="8">
+                        <path d="M16.153 3.224L0 16.962h4.314v11.814h9.87v-8.003h3.934v8.003h9.84V16.962H32"
+                            data-reactid="9"></path>
+                    </svg>
+                    <span>Home</span>
+                </li>
+                <li class="nav-label" type="button">
+                    <span>Mail</span>
+                </li>
+                <li class="nav-label" type="button" routerLinkActive="active" routerLink="/news">
+                    <span>News</span>
+                </li>
+                <li class="nav-label" type="button">
+                    <span>Finance</span>
+                </li>
+                <li class="nav-label" type="button">
+                    <span>Sports</span>
+                </li>
+                <li class="nav-label" type="button">
+                    <span>Entertainement</span>
+                </li>
+                <li class="nav-label" type="button">
+                    <span>Food</span>
+                </li>
+                <li class="nav-label" type="button">
+                    <span>Blog</span>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
