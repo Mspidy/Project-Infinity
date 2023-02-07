@@ -7,6 +7,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./footar.component.css']
 })
 export class FootarComponent {
-  lat: number = 52.488328;
-  lng: number = 8.717017;
 }

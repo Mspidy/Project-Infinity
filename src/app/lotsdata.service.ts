@@ -7,14 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class LotsdataService {
 
-  constructor(public http:HttpClient) { 
-    this.getJSON().subscribe(data=>{
-      console.log(data)
-    })
-   }
+  constructor(public http:HttpClient) {}
 
+  getAllNews(): Observable<any>{
+    let url = `https://newsapi.org/v2/everything?q=tesla&from=2023-01-07&sortBy=publishedAt&apiKey=ecdf9d0d58464f68b9383211c9bdcf1f`
+    return this.http.get(url)
+  }
 
-   getJSON(): Observable<any>{
-    return this.http.get("./assets/jsondata.json");
-   }
 }
