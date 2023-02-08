@@ -17,6 +17,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NewsDetailsComponent } from './news-details/news-details.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { SportsNewsComponent } from './sports-news/sports-news.component';
+import { EntertainmentsComponent } from './entertainments/entertainments.component';
+import { HealthComponent } from './health/health.component';
 
 
 
@@ -28,7 +31,10 @@ import {NgxPaginationModule} from 'ngx-pagination';
     FootarComponent,
     DatamanagementComponent,
     SigninComponent,
-    NewsDetailsComponent
+    NewsDetailsComponent,
+    SportsNewsComponent,
+    EntertainmentsComponent,
+    HealthComponent
   ],
   imports: [
     BrowserModule,
