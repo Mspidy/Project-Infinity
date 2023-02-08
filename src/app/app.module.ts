@@ -19,6 +19,7 @@ import { NewsDetailsComponent } from './news-details/news-details.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

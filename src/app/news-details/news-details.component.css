@@ -144,3 +144,10 @@
 .pagination:hover{
     color: #0c1b39;
 }
+
+.timedate{
+    width: 20%;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 10px;
+}
