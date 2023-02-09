@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { BusinessComponent } from './business/business.component';
 import { DatamanagementComponent } from './datamanagement/datamanagement.component';
 import { EntertainmentsComponent } from './entertainments/entertainments.component';
 import { HealthComponent } from './health/health.component';
 import { NewsDetailsComponent } from './news-details/news-details.component';
+import { ScienceComponent } from './science/science.component';
 import { SigninComponent } from './signin/signin.component';
 import { SportsNewsComponent } from './sports-news/sports-news.component';
 
 const routes: Routes = [
-  {path:'dashboard', component:DashboardComponent},
   { path: 'datamanage', component:DatamanagementComponent},
   { path: 'login', component:SigninComponent},
   { path:'news', component: NewsDetailsComponent},
   { path:'sports', component: SportsNewsComponent},
   { path: 'entertainments', component: EntertainmentsComponent},
   { path: 'healths', component: HealthComponent},
-  { path: '**', redirectTo: 'dashboard' }
+  { path: 'science', component: ScienceComponent},
+  { path: 'business', component: BusinessComponent},
+  // { path: '**', redirectTo: 'dashboard' }
 ];
 
 @NgModule({

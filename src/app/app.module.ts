@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { ChartModule } from 'angular-highcharts';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { NgxGaugeModule } from 'ngx-gauge';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { FootarComponent } from './footar/footar.component';
 import { DatamanagementComponent } from './datamanagement/datamanagement.component';
@@ -20,13 +19,14 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { SportsNewsComponent } from './sports-news/sports-news.component';
 import { EntertainmentsComponent } from './entertainments/entertainments.component';
 import { HealthComponent } from './health/health.component';
+import { ScienceComponent } from './science/science.component';
+import { BusinessComponent } from './business/business.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
     HeaderComponent,
     FootarComponent,
     DatamanagementComponent,
@@ -34,7 +34,9 @@ import { HealthComponent } from './health/health.component';
     NewsDetailsComponent,
     SportsNewsComponent,
     EntertainmentsComponent,
-    HealthComponent
+    HealthComponent,
+    ScienceComponent,
+    BusinessComponent
   ],
   imports: [
     BrowserModule,

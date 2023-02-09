@@ -29,4 +29,13 @@ export class LotsdataService {
     return this.http.get(url)
   }
 
+  getAllScienceNews(): Observable<any>{
+    let url = `https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=ecdf9d0d58464f68b9383211c9bdcf1f`
+    return this.http.get(url)
+  }
+
+  getAllBusinessNews(): Observable<any>{
+    let url = `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=ecdf9d0d58464f68b9383211c9bdcf1f`
+    return this.http.get(url)
+  }
 }
