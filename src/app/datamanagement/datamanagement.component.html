@@ -2,35 +2,30 @@
     <div class="row">
         <h2 class="newsheading">Financial Statistics </h2>
         <div class="row">
-            <input type="file">
+            <input type="file" (input)="onFileChange($event)">
         </div>
     </div>
 </div>
 <nav>
     <ul>
-        <li><a href="#" class="active">Google</a><img src="https://img.icons8.com/color/48/null/google-logo.png"/></li>
-        <li><a href="#">Apple</a><img src="https://img.icons8.com/fluency/48/null/mac-os.png"/></li>
-        <li><a href="#">Samsung</a><img src="https://img.icons8.com/color/48/null/samsung.png"/></li>
-        <li><a href="#">Meta</a><img src="https://img.icons8.com/fluency/48/null/meta.png"/></li>
-        <li><a href="#">More</a><img src="https://img.icons8.com/nolan/64/circled-chevron-down.png"/></li>
+        <li><a type="button" (click)="allGoogleStock()" class="active">Google</a><img src="https://img.icons8.com/color/48/null/google-logo.png" />
+        </li>
+        <li><a type="button" (click)="allAppleStock()">Apple</a><img src="https://img.icons8.com/fluency/48/null/mac-os.png" /></li>
+        <li><a type="button" (click)="allSamsungStock()">Samsung</a><img
+                src="https://img.icons8.com/color/48/null/samsung.png" /></li>
+        <li><a type="button" (click)="allMetaStock()">Meta</a><img src="https://img.icons8.com/fluency/48/null/meta.png" /></li>
+        <li><a type="button">More</a><img src="https://img.icons8.com/nolan/64/circled-chevron-down.png" /></li>
     </ul>
 </nav>
-<!-- <div class="container">
-    <div class="row">
-        <button class="btn btn-primary">Buy Now</button>
-        <button class="btn btn-danger">Subscribe</button>
-    </div>
-</div> -->
-<a href="https://youtu.be/bRzhXfbaXng" target="_blank" class="link">Watch on youtube <i class="fab fa-youtube"></i></a>
-
-
+<a href="https://www.youtube.com/watch?v=zrwTYozyzYA&ab_channel=7clouds" target="_blank" class="link">Watch on youtube <i class="fab fa-youtube"></i></a>
 <div class="container" style="margin-top: 30px;">
     <div class="row">
-        <div class="overflow-auto">
+        <div class="table-responsive" *ngIf="samsung">
             <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th scope="col">Company</th>
+                        <th scope="col">Date</th>
                         <th scope="col">Open Stock</th>
                         <th scope="col">High</th>
                         <th scope="col">Low</th>
@@ -39,37 +34,92 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                    <tr *ngFor="let stock of samsungStock[0]">
+                        <td scope="row">SAMSUNG</td>
+                        <td>{{stock.date | date:'mediumDate'}}</td>
+                        <td>{{stock.open}}</td>
+                        <td class="highStock">{{stock.high}}</td>
+                        <td class="lowStock">{{stock.low}}</td>
+                        <td>{{stock.close}}</td>
+                        <td>{{stock.adjclose}}</td>
                     </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive" *ngIf="google">
+            <table class="table table-bordered">
+                <thead>
                     <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <th scope="col">Company</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Open Stock</th>
+                        <th scope="col">High</th>
+                        <th scope="col">Low</th>
+                        <th scope="col">Close</th>
+                        <th scope="col">Adj Close</th>
                     </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let stock of samsungStock[0]">
+                        <td scope="row">GOOGLE</td>
+                        <td>{{stock.date | date:'mediumDate'}}</td>
+                        <td>{{stock.open}}</td>
+                        <td class="highStock">{{stock.high}}</td>
+                        <td class="lowStock">{{stock.low}}</td>
+                        <td>{{stock.close}}</td>
+                        <td>{{stock.adjclose}}</td>
                     </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive" *ngIf="apple">
+            <table class="table table-bordered">
+                <thead>
                     <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <th scope="col">Company</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Open Stock</th>
+                        <th scope="col">High</th>
+                        <th scope="col">Low</th>
+                        <th scope="col">Close</th>
+                        <th scope="col">Adj Close</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let stock of samsungStock[0]">
+                        <td scope="row">APPLE</td>
+                        <td>{{stock.date | date:'mediumDate'}}</td>
+                        <td>{{stock.open}}</td>
+                        <td class="highStock">{{stock.high}}</td>
+                        <td class="lowStock">{{stock.low}}</td>
+                        <td>{{stock.close}}</td>
+                        <td>{{stock.adjclose}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive" *ngIf="meta">
+            <table class="table table-bordered" style="table-layout: fixed">
+                <thead>
+                    <tr>
+                        <th scope="col">Company</th>
+                        <th scope="col">Date</th>
+                        <th scope="col" style="font-size: 12px;">Open Stock</th>
+                        <th scope="col">High</th>
+                        <th scope="col">Low</th>
+                        <th scope="col">Close</th>
+                        <th scope="col" style="font-size: 13px;">Adj Close</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let stock of metaStocks[0]">
+                        <td scope="row">META</td>
+                        <td style="font-size: 13px;">{{stock.date | date:'mediumDate'}}</td>
+                        <td>{{stock.open}}</td>
+                        <td class="highStock">{{stock.high}}</td>
+                        <td class="lowStock">{{stock.low}}</td>
+                        <td>{{stock.close}}</td>
+                        <td>{{stock.adjclose}}</td>
                     </tr>
                 </tbody>
             </table>

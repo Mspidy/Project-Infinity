@@ -149,9 +149,14 @@ input[type=file] {
     color: whitesmoke;
     width: 100%;
     margin-top: 20px;
-    font-family: Brush Script MT, Brush Script Std, cursive;
+    /* font-family: Brush Script MT, Brush Script Std, cursive; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
+h2{
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .row{
     justify-content: end;
     height: 10%;
@@ -166,10 +171,10 @@ button{
 
 table{
     color: #FFF;
-    width: 50%;
-    margin-right: auto;
     margin-left: 30px;
     height: 40px;
+    border-collapse: collapse;
+    width: 50%;
 }
 
 .histogram{
@@ -198,4 +203,23 @@ table{
 img{
     width: 20px;
     margin-left: -26px;
+}
+
+.table-responsive {
+    max-height:200px;
+}
+
+.table-responsive::-webkit-scrollbar {
+    display: none;
+}
+
+.highStock{
+    /* color: green; */
+    background-color: green;
+    opacity: 0.8;
+}
+
+.lowStock{
+    background-color: red;
+    opacity: 0.8;
 }
