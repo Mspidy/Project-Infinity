@@ -21,6 +21,7 @@ import { EntertainmentsComponent } from './entertainments/entertainments.compone
 import { HealthComponent } from './health/health.component';
 import { ScienceComponent } from './science/science.component';
 import { BusinessComponent } from './business/business.component';
+import { HomeBlogComponent } from './home-blog/home-blog.component';
 
 
 
@@ -36,7 +37,8 @@ import { BusinessComponent } from './business/business.component';
     EntertainmentsComponent,
     HealthComponent,
     ScienceComponent,
-    BusinessComponent
+    BusinessComponent,
+    HomeBlogComponent
   ],
   imports: [
     BrowserModule,

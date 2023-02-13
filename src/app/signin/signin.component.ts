@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent {
+  signupform:boolean = false;
 
+  signup(){
+    this.signupform = true
+  }
 }
