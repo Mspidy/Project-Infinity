@@ -63,4 +63,14 @@ export class LotsdataService {
     let url = `${environment.base_URL}/getmetaStocks`;
     return this.http.get(url)
   }
+
+  registrationNewUser(obj:any): Observable<any>{
+    let url = `${environment.base_URL}/newuser`;
+    return this.http.post(url,obj)
+  }
+
+  getAllUser(): Observable<any>{
+    let url = `${environment.base_URL}/getAllUser`;
+    return this.http.get(url);
+  }
 }
