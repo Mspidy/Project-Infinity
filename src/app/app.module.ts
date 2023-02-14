@@ -3,9 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { ChartModule } from 'angular-highcharts';
-import { HighchartsChartModule } from 'highcharts-angular';
 import { NgxGaugeModule } from 'ngx-gauge';
 import { HeaderComponent } from './header/header.component';
 import { FootarComponent } from './footar/footar.component';
@@ -22,7 +19,9 @@ import { HealthComponent } from './health/health.component';
 import { ScienceComponent } from './science/science.component';
 import { BusinessComponent } from './business/business.component';
 import { HomeBlogComponent } from './home-blog/home-blog.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -43,15 +42,16 @@ import { HomeBlogComponent } from './home-blog/home-blog.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChartModule,
-    HighchartsChartModule,
     NgxGaugeModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw',
     }),
     FormsModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

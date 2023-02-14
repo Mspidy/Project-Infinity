@@ -1,5 +1,5 @@
 <ng-container>
-    <div class="container">
+    <div class="container" *ngIf="sigin">
         <form>
             <div class="row">
                 <h3>LOGIN</h3>
@@ -16,7 +16,29 @@
             <p type="button" (click)="signup()">New User ?</p>
         </form>
     </div>
-    <div class="container">
-        
+    <div class="container" *ngIf="signups">
+        <form [formGroup]="newRegisteration">
+            <div class="row">
+                <h3>SIGNUP</h3>
+            </div>
+            <div class="row">
+                <label for="name">Name</label>
+                <input type="text" formControlName="username" autocomplete="off" placeholder="full name">
+            </div>
+            <div class="row">
+                <label for="email">Email</label>
+                <input type="email" formControlName="email" autocomplete="off" placeholder="email@example.com">
+            </div>
+            <div class="row">
+                <label for="password">Password</label>
+                <input type="password" formControlName="password">
+            </div>
+            <div class="row">
+                <label for="password">re-Password</label>
+                <input type="password" formControlName="repassword">
+            </div>
+            <button type="submit" (click)="newRegisterations()">Signup</button>
+            <p type="button" (click)="signin()">already register ? signin</p>
+        </form>
     </div>
 </ng-container>
