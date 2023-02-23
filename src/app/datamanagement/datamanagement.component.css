@@ -223,3 +223,9 @@ img{
     background-color: red;
     opacity: 0.8;
 }
+
+.sparkline {
+    width: 10px;
+    height: 10px;
+  }
+  

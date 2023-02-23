@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'healths', component: HealthComponent},
   { path: 'science', component: ScienceComponent},
   { path: 'business', component: BusinessComponent},
-  { path: '**', redirectTo: 'login' }
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({

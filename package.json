@@ -25,6 +25,7 @@
     "angular-highcharts": "^14.1.7",
     "apexcharts": "^3.36.3",
     "bootstrap": "^5.2.3",
+    "devextreme-angular": "^22.2.4",
     "highcharts-angular": "^3.0.0",
     "ng-apexcharts": "^1.7.4",
     "ng-bootstrap-datetime-angular": "^0.1.27",
