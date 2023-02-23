@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 export class SigninComponent {
   signups:boolean = false;
   sigin:boolean = true;
-  newRegisteration:any;
+  newRegisteration!:FormGroup;
 
   constructor(public apiService: LotsdataService, public toastr: ToastrService){}
 

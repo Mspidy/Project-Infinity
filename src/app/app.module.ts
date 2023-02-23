@@ -22,6 +22,7 @@ import { HomeBlogComponent } from './home-blog/home-blog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { DxSparklineModule } from 'devextreme-angular';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { ToastrModule } from 'ngx-toastr';
     NgxPaginationModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DxSparklineModule
   ],
   providers: [],
   bootstrap: [AppComponent]
