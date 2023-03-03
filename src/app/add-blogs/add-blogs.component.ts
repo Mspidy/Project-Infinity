@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AddBlogsComponent {
 
+  newBlog:boolean=false;
+  mainBlog:boolean=true;
+  documentObj:any="";
+
+  createBlog(){
+    this.newBlog = true;
+    this.mainBlog = false;
+  }
+
+  mainPage(){
+    this.newBlog = false;
+    this.mainBlog = true;
+  }
 }

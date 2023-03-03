@@ -1,1 +1,55 @@
-<p>add-blogs works!</p>
+<div class="container" *ngIf="mainBlog">
+    <div class="row">
+        <div class="col-sm-12">
+            <button class="btn btn-primary" (click)="createBlog()">Add New Blog</button>
+        </div>
+        <div class="col-sm-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Last Update</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Internet of Things</th>
+                        <td>We are trying to build a magical world</td>
+                        <td>Jan 31, 2023</td>
+                        <td>
+                            <a style="color: yellow;" type="button">Edit</a>
+                            &nbsp;
+                            <a style="color: red;" type="button">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="container" *ngIf="newBlog">
+    <div class="row">
+        <div class="new_blog">
+            <img src="https://img.icons8.com/fluency/48/null/circled-left-2.png" (click)="mainPage()" type="button"/>
+            <p>Add New Blog</p>
+        </div>
+        <div class="new_blog_details">
+            <p>Enter the following details:</p>
+            <div class="image_add_blog blog_img_add">
+                <img alt="" [src]="documentObj">
+            </div>
+            <div class="post_form_group">
+                <input type="file" style="color: #FFF;">
+                <p>Image Dimensions: 490 x 217</p>
+                <p>Please upload under 400kb</p>
+            </div>
+            <div class="post_form_group">
+                <p class="pf_label_form">Blog Title</p>
+                <!-- <input type="text"> -->
+            </div>
+        </div>
+    </div>
+</div>
