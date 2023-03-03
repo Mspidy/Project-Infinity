@@ -1,0 +1,90 @@
+.about_box{
+    max-width: 586px;
+    z-index: 5;
+}
+
+.about_box h1{
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.about_box p{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+.blog_about_banner img{
+    width: 100%;
+    margin-top: 72px;
+}
+
+.blog_about_banner{
+    height: 520px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-image: url(../about-us/blogs.jpg);
+    z-index: 5;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.blog_about_banner::after{
+    content: "";
+    background: linear-gradient(58.54deg, #113070 21.32%, rgba(17,48,112,0) 71%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.about-blog h2{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.about-blog p{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+.my_auto{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.blog_img{
+    width: 500px;
+    height: 360px;
+    background-color: transparent;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.blog_img img{
+    max-width: 100%;
+    border-radius: 5px;
+    height: auto;
+}

@@ -23,6 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { DxSparklineModule } from 'devextreme-angular';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { AddBlogsComponent } from './add-blogs/add-blogs.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { DxSparklineModule } from 'devextreme-angular';
     HealthComponent,
     ScienceComponent,
     BusinessComponent,
-    HomeBlogComponent
+    HomeBlogComponent,
+    AboutUsComponent,
+    AddBlogsComponent
   ],
   imports: [
     BrowserModule,
