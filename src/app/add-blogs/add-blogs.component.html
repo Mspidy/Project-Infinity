@@ -14,10 +14,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">Internet of Things</th>
-                        <td>We are trying to build a magical world</td>
-                        <td>Jan 31, 2023</td>
+                    <tr *ngFor="let blogs of AllBlogs">
+                        <th scope="row">{{blogs.blogtitle}}</th>
+                        <td>{{blogs.blogdescription}}</td>
+                        <td>{{blogs.createdAt | date:'mediumDate'}}</td>
                         <td>
                             <a style="color: yellow;" type="button">Edit</a>
                             &nbsp;
@@ -36,20 +36,43 @@
             <img src="https://img.icons8.com/fluency/48/null/circled-left-2.png" (click)="mainPage()" type="button"/>
             <p>Add New Blog</p>
         </div>
-        <div class="new_blog_details">
-            <p>Enter the following details:</p>
-            <div class="image_add_blog blog_img_add">
-                <img alt="" [src]="documentObj">
+        <form [formGroup]="newBlogs">
+            <div class="new_blog_details">
+                <p>Enter the following details:</p>
+                <div class="image_add_blog blog_img_add">
+                    <img alt="" src="assets/imge.jpg">
+                </div>
+                <div class="post_form_group">
+                    <input type="file" style="color: #FFF;" formControlName="imageBlogs">
+                    <p>Image Dimensions: 490 x 217</p>
+                    <p>Please upload under 400kb</p>
+                </div>
+                <div class="post_form_group">
+                    <p class="pf_label_form">Select Blog Type</p>
+                    <select class="input_field_blog" formControlName="selectBlog">
+                        <option value="" selected>Blogs Type</option>
+                        <option value="News">News</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Health">Health</option>
+                        <option value="Science">Science</option>
+                        <option value="Business">Business</option>
+                      </select>
+                </div>
+                <div class="post_form_group">
+                    <p class="pf_label_form">Blog Title</p>
+                    <input class="input_field_blog" type="text" placeholder="Enter Blog Title" formControlName="blogtitle">
+                </div>
+                <div class="post_form_group">
+                    <p class="pf_label_form">Description</p>
+                    <input class="input_field_blog" type="text" placeholder="Enter Description" formControlName="blogdescription">
+                </div>
+                <div class="post_form_group">
+                    <button class="btn btn-primary" (click)="saveblogs()">Save Blog</button>
+                </div>
             </div>
-            <div class="post_form_group">
-                <input type="file" style="color: #FFF;">
-                <p>Image Dimensions: 490 x 217</p>
-                <p>Please upload under 400kb</p>
-            </div>
-            <div class="post_form_group">
-                <p class="pf_label_form">Blog Title</p>
-                <!-- <input type="text"> -->
-            </div>
-        </div>
+        </form>
     </div>
 </div>
+
+<!-- (change)="onFileChange($event, 'blogimage')" -->

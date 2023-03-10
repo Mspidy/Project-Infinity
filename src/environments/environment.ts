@@ -5,6 +5,10 @@
 export const environment = {
     production: false,
     base_URL:'http://localhost:2000/user',
+
+    awsS3: {
+       
+    }
   };
   
   /*

@@ -24,6 +24,7 @@
     "@types/highcharts": "^7.0.0",
     "angular-highcharts": "^14.1.7",
     "apexcharts": "^3.36.3",
+    "aws-sdk": "^2.1331.0",
     "bootstrap": "^5.2.3",
     "devextreme-angular": "^22.2.4",
     "highcharts-angular": "^3.0.0",

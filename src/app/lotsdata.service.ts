@@ -2,13 +2,22 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; 
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import {S3} from 'aws-sdk/clients/all';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LotsdataService {
 
-  constructor(public http:HttpClient) {}
+
+  bucket: any;
+  constructor(public http:HttpClient) {
+    // this.bucket = new S3({
+    //   accessKeyId: environment.awsS3.accessKeyId,
+    //   secretAccessKey: environment.awsS3.secretAccessKey,
+    //   region: environment.awsS3.region
+    // })
+  }
 
   getAllNews(): Observable<any>{
     let url = `https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=816419abdc3f49a6a9ea8cba3356cc66`
@@ -73,4 +82,35 @@ export class LotsdataService {
     let url = `${environment.base_URL}/getAllUser`;
     return this.http.get(url);
   }
+
+  newBlogs(obj:any): Observable<any>{
+    let url = `${environment.base_URL}/newblog`;
+    return this.http.post(url,obj)
+  }
+
+  getBlogs(): Observable<any>{
+    let url = `${environment.base_URL}/getAllBlogs`;
+    return this.http.get(url)
+  }
+
+  // uploadFile(files:any, subPath:any, photoName:any){
+  //   var promises = [];
+  //   promises.push(this.uploadFileToS3(files, subPath, photoName));
+  //   return Promise.all(promises);
+  // }
+
+  // uploadFileToS3(file:any, subPath: any, photoName: any){
+  //   return new Promise((resolve, reject)=>{
+  //     let name = file.type.split('/')[1];
+  //     let date = new Date().getTime()
+  //     const params = {
+  //       Bucket: environment.aws3.bucketName,
+  //       Key: `${photoName}` + `${date}.` + `${file.type.split('/')[1]}`,
+  //       Body: file,
+  //       ACL: 'private',
+  //       ContentType: file.type,
+  //     };
+  //     console.log('params', params);
+  //   })
+  // }
 }
