@@ -62,14 +62,10 @@ a{
 
 .all{
    padding: 20px;
+   background-image: linear-gradient(to left,#0d174c, #00008B);
 }
 
 p::selection{
     background: #1111;
   color: #f5cc01;
-}
-
-a:hover{
-    width: 50%;
-    text-align: center;
 }
